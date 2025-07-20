@@ -37,20 +37,15 @@ nueva_tupla = tuple(lista_colores)
 print(f"Tupla modificada: {nueva_tupla}")  # ('rojo', 'verde', 'azul', 'amarillo')
 
 # 5. Conteo de elementos
-```python
 print(f"Veces 'azul': {colores.count('azul')}")  # 1
 
-
 # 6. Búsqueda de posición
-```python
 print(f"Posición de 'verde': {colores.index('verde')}")  # 1
 
 # 7. Tupla unitaria (¡atención a la coma!)
-```python
 tupla_unitario = ('solo',)
 print(f"Tipo: {type(tupla_unitario)}")  # <class 'tuple'>
 
 # 8. Desempaquetado
-```python
 r, v, a = colores
 print(f"Rojo: {r}, Verde: {v}, Azul: {a}")
