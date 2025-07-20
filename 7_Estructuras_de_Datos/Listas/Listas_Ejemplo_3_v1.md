@@ -1,5 +1,6 @@
 # Explicación de Variables Globales
 
+
 Las variables globales en Python son aquellas definidas fuera de cualquier función o clase, en el nivel superior de un módulo. En este ejemplo:
 
 ```python
