@@ -37,7 +37,8 @@
 
 - Cuenta operaciones por acción
 
-## 3. ¿Por qué Tuplas?
+## 3. Las Tuplas son necesarias por lo siguiente:
+
 - Seguridad: Previene modificación accidental de transacciones
 
 - Rendimiento: Procesamiento más rápido que listas para acceso
