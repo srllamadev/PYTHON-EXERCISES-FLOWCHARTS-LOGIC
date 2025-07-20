@@ -2,7 +2,7 @@
 ##1. Estructura de Datos
 -Cada transacción es una tupla con:
 
-´´´python
+´´´ bash
 (ticker, fecha, precio_por_accion, cantidad, tipo_operacion)
 Inmutabilidad: Garantiza que los registros históricos no sean alterados
 ´´´
