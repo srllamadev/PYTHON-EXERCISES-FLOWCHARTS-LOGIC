@@ -1,11 +1,11 @@
-#Análisis del Código
-##1. Estructura de Datos
--Cada transacción es una tupla con:
+# Análisis del Código
+## 1. Estructura de Datos
+- Cada transacción es una tupla con:
 
-´´´ bash
+```bash
 (ticker, fecha, precio_por_accion, cantidad, tipo_operacion)
 Inmutabilidad: Garantiza que los registros históricos no sean alterados
-´´´
+```
 #Eficiencia: Menor sobrecarga que diccionarios u objetos para datos simples
 
 ## 2. Funciones Clave
