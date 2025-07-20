@@ -12,7 +12,7 @@ import random
 import matplotlib.pyplot as plt
 
 # =============================================
-# VARIABLES GLOBALES (Explicación después del código)
+# VARIABLES GLOBALES
 # =============================================
 CATEGORIAS = ["Electrónicos", "Ropa", "Alimentos", "Muebles", "Juguetes"]
 ALMACENES = ["Norte", "Sur", "Centro", "Este", "Oeste"]
@@ -61,7 +61,8 @@ class SistemaInventario:
             # Crear entradas de inventario por almacén
             inventario = []
             for almacen in ALMACENES:
-                stock = random.randint(0, 100)
+                # Aumentamos el stock inicial mínimo a 50 unidades
+                stock = random.randint(50, 150)
                 if stock > 0:
                     inventario.append({
                         "almacen": almacen,
@@ -81,17 +82,38 @@ class SistemaInventario:
             })
 
     def _simular_movimientos(self, cantidad):
-        """Simula movimientos de inventario históricos"""
+        """Simula movimientos de inventario históricos con manejo de errores"""
         for _ in range(cantidad):
             producto = random.choice(self.productos)
             almacen = random.choice(ALMACENES)
-            tipo = random.choice(["entrada", "salida"])
-            cantidad = random.randint(1, 20)
+            
+            # Aumentamos probabilidad de entradas (70%) vs salidas (30%)
+            tipo = random.choices(["entrada", "salida"], weights=[7, 3], k=1)[0]
+            
+            # Reducimos la cantidad máxima para salidas
+            if tipo == "salida":
+                cantidad_mov = random.randint(1, 10)  # Máximo 10 unidades
+            else:
+                cantidad_mov = random.randint(5, 30)  # Entradas entre 5-30
+                
             fecha = (datetime.now() - timedelta(days=random.randint(0, 90))).strftime("%Y-%m-%d")
             
-            self.registrar_movimiento(
-                producto["id"], almacen, tipo, cantidad, fecha
-            )
+            # Intentamos registrar el movimiento
+            try:
+                self.registrar_movimiento(
+                    producto["id"], almacen, tipo, cantidad_mov, fecha
+                )
+            except ValueError as e:
+                # Si hay error de stock insuficiente, lo convertimos en entrada
+                if "Stock insuficiente" in str(e):
+                    tipo = "entrada"
+                    # Volvemos a intentar como entrada
+                    self.registrar_movimiento(
+                        producto["id"], almacen, tipo, cantidad_mov, fecha
+                    )
+                else:
+                    # Re-lanzamos otros tipos de errores
+                    raise
 
     def registrar_movimiento(self, producto_id, almacen, tipo, cantidad, fecha=None):
         """Registra un movimiento de inventario aplicando FIFO"""
@@ -139,14 +161,20 @@ class SistemaInventario:
 
     def verificar_reabastecimiento(self, producto_id, almacen):
         """Verifica si se necesita reabastecer y genera pedido automático"""
-        producto = next(p for p in self.productos if p["id"] == producto_id)
-        inv_almacen = next(inv for inv in producto["inventario"] if inv["almacen"] == almacen)
-        umbral = self.umbral_reabastecimiento[producto["categoria"]]
+        producto = next((p for p in self.productos if p["id"] == producto_id), None)
+        if not producto:
+            return False
+            
+        inv_almacen = next((inv for inv in producto["inventario"] if inv["almacen"] == almacen), None)
+        if not inv_almacen:
+            return False
+            
+        umbral = self.umbral_reabastecimiento.get(producto["categoria"], 10)
         
         if inv_almacen["stock"] <= umbral:
             # Calcular cantidad a pedir (doble del umbral)
             cantidad_pedido = umbral * 2
-            tiempo_reposicion = self.tiempo_reposicion[producto["proveedor"]]
+            tiempo_reposicion = self.tiempo_reposicion.get(producto["proveedor"], 5)
             fecha_estimada = (datetime.now() + timedelta(days=tiempo_reposicion)).strftime("%Y-%m-%d")
             
             print(f"⚠️ Generando pedido de {cantidad_pedido} unidades de {producto_id} para {almacen}")
@@ -181,7 +209,10 @@ class SistemaInventario:
         rotacion = {cat: {"entradas": 0, "salidas": 0} for cat in CATEGORIAS}
         
         for mov in movimientos_recientes:
-            producto = next(p for p in self.productos if p["id"] == mov["producto_id"])
+            producto = next((p for p in self.productos if p["id"] == mov["producto_id"]), None)
+            if not producto:
+                continue
+                
             cat = producto["categoria"]
             
             if mov["tipo"] == "entrada":
@@ -253,8 +284,12 @@ if __name__ == "__main__":
     # Generar reporte de estado
     sistema.generar_reporte_estado()
     
-    # Visualizar tendencias
-    sistema.visualizar_tendencias()
+    # Visualizar tendencias (con manejo de errores)
+    try:
+        sistema.visualizar_tendencias()
+    except Exception as e:
+        print(f"\n⚠️ Error al generar gráfico: {str(e)}")
+        print("Asegúrate de tener matplotlib instalado: pip install matplotlib")
     
     # Simular nueva venta
     print("\nSimulando nueva venta...")
@@ -263,6 +298,7 @@ if __name__ == "__main__":
     sistema.registrar_movimiento(
         producto_venta["id"], almacen_venta, "salida", 15
     )
+    print(f"Venta registrada: 15 unidades de {producto_venta['id']} en {almacen_venta}")
     
     # Generar reporte actualizado
     sistema.generar_reporte_estado()
