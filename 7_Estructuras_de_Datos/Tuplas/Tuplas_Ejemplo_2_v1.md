@@ -4,9 +4,9 @@
 
 ```bash
 (ticker, fecha, precio_por_accion, cantidad, tipo_operacion)
-Inmutabilidad: Garantiza que los registros históricos no sean alterados
 ```
-#Eficiencia: Menor sobrecarga que diccionarios u objetos para datos simples
+- Inmutabilidad: Garantiza que los registros históricos no sean alterados```
+# Eficiencia: Menor sobrecarga que diccionarios u objetos para datos simples
 
 ## 2. Funciones Clave
 ### valor_total_por_accion:
