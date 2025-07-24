@@ -1,12 +1,12 @@
-#Análisis del Código
-##1. Estructura de Datos
--Cada transacción es una tupla con:
+# Análisis del Código
+## 1. Estructura de Datos
+- Cada transacción es una tupla con:
 
-´´´python
+```bash
 (ticker, fecha, precio_por_accion, cantidad, tipo_operacion)
-Inmutabilidad: Garantiza que los registros históricos no sean alterados
-´´´
-#Eficiencia: Menor sobrecarga que diccionarios u objetos para datos simples
+```
+- Inmutabilidad: Garantiza que los registros históricos no sean alterados```
+# Eficiencia: Menor sobrecarga que diccionarios u objetos para datos simples
 
 ## 2. Funciones Clave
 ### valor_total_por_accion:
@@ -37,7 +37,8 @@ Inmutabilidad: Garantiza que los registros históricos no sean alterados
 
 - Cuenta operaciones por acción
 
-## 3. ¿Por qué Tuplas?
+## 3. Las Tuplas son necesarias por lo siguiente:
+
 - Seguridad: Previene modificación accidental de transacciones
 
 - Rendimiento: Procesamiento más rápido que listas para acceso
