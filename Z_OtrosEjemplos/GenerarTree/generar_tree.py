@@ -7,12 +7,12 @@ Coloca la direccion de la carpeta que quieres documentar.
 base_path = r"direccion_carpeta"
 
 # Profundidad máxima
-max_depth = 3
+max_depth = 6
 
 # Archivo de salida
 output_file = "estructura.txt"
 
-def tree(dir_path, prefix="", depth=0, max_depth=3, file_handle=None):
+def tree(dir_path, prefix="", depth=0, max_depth=6, file_handle=None):
     if depth > max_depth:
         return
 
