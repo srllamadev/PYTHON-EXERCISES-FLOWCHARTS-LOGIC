@@ -1,4 +1,4 @@
-# Leer cantidad de números
+##Dados N números, encontrar el máximo y el mínimo de los datos leídos. Leer cantidad de números
 N = int(input())
 
 # Si no hay datos, mostrar 0 0
