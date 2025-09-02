@@ -9,6 +9,5 @@ for _ in range(N):
     x = int(input())
     if x % 2 == 0:
         suma_pares += x
-
 # Imprimir resultado
 print(suma_pares)
