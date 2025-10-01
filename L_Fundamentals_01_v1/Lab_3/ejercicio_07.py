@@ -28,12 +28,7 @@ def solve() -> dict:
 
 
 def demo() -> None:
-    print("Ejercicio 07: combinaciones y tabla de puntos medios")
-    pairs = combinations_1_to_7()
-    for p in pairs:
-        print(p)
-    print(f"\nEl número total de todas las combinaciones es {len(pairs)}")
-
+    
     print("\nTabla de puntos medios:")
     print("a           b           Punto medio")
     for a, b, m in solve()["midpoints"]:
