@@ -1,14 +1,14 @@
 # Segundo Reto - INF-111
 ## Algoritmos y Programación en Python
 
-### 📚 Descripción
+### Descripción
 Colección de 10 ejercicios de algoritmia que abarcan:
 - **Parte 1:** Verificación de números primos, MCD mediante Euclides
 - **Parte 2:** Manipulación de dígitos usando operaciones matemáticas
 
 ---
 
-## 📋 Lista de Ejercicios
+## Lista de Ejercicios
 
 ### Ejercicio 1: Números Primos hasta N
 **Archivo:** `ejercicio_1.py`
@@ -257,7 +257,7 @@ Salida: Suma de los dígitos: 15
 
 ---
 
-## 🔧 Operaciones Matemáticas Clave
+## Operaciones Matemáticas Clave
 
 Todos los ejercicios usan **operaciones matemáticas** en lugar de funciones de strings:
 
@@ -270,7 +270,7 @@ Todos los ejercicios usan **operaciones matemáticas** en lugar de funciones de 
 
 ---
 
-## 📊 Estructura de Cada Ejercicio
+## Estructura de Cada Ejercicio
 
 Cada archivo `.py` incluye:
 
@@ -295,7 +295,7 @@ Cada archivo `.py` incluye:
 
 ---
 
-## 🚀 Cómo Usar
+## Cómo Usar
 
 ### Ejecutar un ejercicio:
 ```bash
@@ -319,16 +319,16 @@ python ejercicio_1.py
 
 ---
 
-## 📝 Notas Importantes
+## Notas Importantes
 
-- ✅ **Usa operaciones matemáticas** para manipular dígitos
-- ❌ **NO uses funciones de strings** (str, reverse, etc.)
-- ✅ **Variables descriptivas** (suma_pares, cantidad_digitos, etc.)
-- ✅ **Comentarios claros** en cada paso del algoritmo
+- **Usa operaciones matemáticas** para manipular dígitos
+- **NO uses funciones de strings** (str, reverse, etc.)
+- **Variables descriptivas** (suma_pares, cantidad_digitos, etc.)
+- **Comentarios claros** en cada paso del algoritmo
 
 ---
 
-## 🎯 Objetivos de Aprendizaje
+## Objetivos de Aprendizaje
 
 1. Manipulación de números con operadores matemáticos
 2. Estructuras de control (while, if-else)
@@ -338,19 +338,15 @@ python ejercicio_1.py
 
 ---
 
-## 👨‍💻 Autor
+## Autor
 Ejercicios para la materia **Introducción a la Informática (INF-111)**
 
 ---
 
-## 📚 Referencias
+## Referencias
 
 - Algoritmo de Euclides
 - Números primos
 - Manipulación de dígitos
 - Palíndromos
 - Operaciones matemáticas básicas en Python
-
----
-
-**¡Éxito en tus estudios! 🚀**
