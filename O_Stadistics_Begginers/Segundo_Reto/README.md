@@ -1,4 +1,4 @@
-# Segundo Reto - INF-111
+# Segundo Reto
 ## Algoritmos y Programación en Python
 
 ### Descripción
