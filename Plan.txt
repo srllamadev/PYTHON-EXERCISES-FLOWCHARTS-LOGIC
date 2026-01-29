@@ -1,0 +1,223 @@
+===========================================
+PLAN DE ESTUDIO - PYTHON FUNDAMENTALS TO GUI
+===========================================
+
+Basado en: Python Crash Course, Automate the Boring Stuff, Learning Python (O'Reilly)
+
+=== FASE 1: FUNDAMENTOS ===
+
+01_Introduccion/
+    - Variables y tipos de datos
+    - Operadores básicos
+    - Input/Output
+    - Comentarios y documentación
+
+02_Estructuras_Condicionales/
+    - if, elif, else
+    - Operadores lógicos
+    - Expresiones booleanas
+    - Operador ternario
+
+03_Estructuras_Repetitivas/
+    - while loops
+    - for loops
+    - break, continue, pass
+    - range() function
+
+04_Estructuras_de_Datos/
+    - Listas (list)
+    - Tuplas (tuple)
+    - Diccionarios (dict)
+    - Conjuntos (set)
+    - Comprensiones (list, dict, set comprehensions)
+
+05_Funciones/
+    - Definición y llamada
+    - Parámetros y argumentos
+    - Return values
+    - Scope (local/global)
+    - Lambda functions
+    - *args y **kwargs
+    - Decoradores básicos
+
+06_Strings_y_Manejo_de_Texto/
+    - Métodos de string
+    - Formateo (f-strings, format())
+    - Expresiones regulares (regex)
+    - Manipulación avanzada
+
+=== FASE 2: PROGRAMACIÓN ORIENTADA A OBJETOS ===
+
+07_POO_Fundamentos/
+    - Clases y objetos
+    - __init__ constructor
+    - Atributos y métodos
+    - self keyword
+    - Métodos especiales (__str__, __repr__)
+
+08_POO_Avanzado/
+    - Herencia
+    - Polimorfismo
+    - Encapsulamiento
+    - Métodos de clase y estáticos
+    - Properties y decoradores
+    - Métodos mágicos avanzados
+
+=== FASE 3: MANEJO DE ARCHIVOS Y DATOS ===
+
+09_Archivos_y_Excepciones/
+    - Lectura y escritura de archivos
+    - Context managers (with)
+    - Manejo de excepciones (try-except)
+    - Excepciones personalizadas
+    - Logging básico
+
+10_Formatos_de_Datos/
+    - JSON
+    - CSV
+    - XML
+    - Pickle
+    - Configuraciones (ConfigParser, YAML)
+
+=== FASE 4: MÓDULOS Y PAQUETES ===
+
+11_Modulos_y_Paquetes/
+    - Import statements
+    - Crear módulos propios
+    - __name__ == "__main__"
+    - Estructura de paquetes
+    - __init__.py
+    - Módulos estándar importantes
+
+12_Biblioteca_Estandar/
+    - os y sys
+    - pathlib
+    - datetime
+    - collections
+    - itertools
+    - functools
+    - math y random
+
+=== FASE 5: PROGRAMACIÓN FUNCIONAL Y AVANZADA ===
+
+13_Programacion_Funcional/
+    - Map, filter, reduce
+    - Funciones de orden superior
+    - Closures
+    - Decoradores avanzados
+    - Generadores e iteradores
+    - Context managers personalizados
+
+14_Testing_y_Debugging/
+    - unittest
+    - pytest
+    - Debugging con pdb
+    - Logging avanzado
+    - Docstrings y doctests
+
+=== FASE 6: DESARROLLO DE APLICACIONES ===
+
+15_Argumentos_CLI/
+    - sys.argv
+    - argparse
+    - click
+    - Creación de CLI tools
+
+16_Bases_de_Datos/
+    - SQLite básico
+    - SQL queries desde Python
+    - ORMs (SQLAlchemy básico)
+    - CRUD operations
+
+=== FASE 7: GUI - INTERFACES GRÁFICAS ===
+
+17_Tkinter_Fundamentos/
+    - Introducción a Tkinter
+    - Widgets básicos (Label, Button, Entry)
+    - Layout managers (pack, grid, place)
+    - Event handling
+    - Variables de control (StringVar, IntVar, etc.)
+
+18_Tkinter_Intermedio/
+    - Widgets avanzados (Listbox, Combobox, Treeview)
+    - Menús y barras de herramientas
+    - Dialogs y ventanas emergentes
+    - Canvas y gráficos
+    - Frames y organización
+
+19_Tkinter_Avanzado/
+    - Customización de widgets
+    - Temas (ttk)
+    - Threading en GUI
+    - Drag and drop
+    - MVC pattern en Tkinter
+
+20_PyQt_o_Kivy_Introduccion/
+    - PyQt5/6 básico (alternativa profesional)
+    - Kivy básico (apps móviles)
+    - Comparación de frameworks
+    - Qt Designer
+    - Signals y slots
+
+21_Proyectos_GUI/
+    - Calculadora
+    - Editor de texto
+    - Gestor de tareas (To-Do App)
+    - Sistema de inventario
+    - Aplicación de base de datos
+    - Reproductor multimedia simple
+
+=== FASE 8: COMPLEMENTOS PROFESIONALES ===
+
+22_Empaquetado_y_Distribucion/
+    - pip y requirements.txt
+    - Virtual environments (venv, virtualenv)
+    - setup.py y setuptools
+    - PyInstaller (crear ejecutables)
+    - py2exe, py2app
+
+23_Buenas_Practicas/
+    - PEP 8 (estilo de código)
+    - Type hints
+    - Documentación (Sphinx)
+    - Code review
+    - Refactoring
+
+24_Proyectos_Integradores/
+    - Sistema completo con GUI + DB
+    - Aplicación de gestión empresarial
+    - Dashboard de datos
+    - Herramienta de automatización
+
+=== RECURSOS RECOMENDADOS ===
+
+Libros:
+1. "Python Crash Course" - Eric Matthes (estructura general)
+2. "Automate the Boring Stuff with Python" - Al Sweigart (práctico)
+3. "Learning Python" - Mark Lutz (profundo)
+4. "Python GUI Programming with Tkinter" - Alan D. Moore
+5. "Fluent Python" - Luciano Ramalho (avanzado)
+
+Documentación oficial:
+- https://docs.python.org/3/tutorial/
+- https://docs.python.org/3/library/tkinter.html
+
+=== NOTAS IMPORTANTES ===
+
+- Cada carpeta debe tener:
+  * README.md con teoría y conceptos
+  * Ejercicios progresivos (fácil -> difícil)
+  * Proyecto integrador de la sección
+  * Soluciones comentadas
+
+- Tiempo estimado por fase:
+  * Fases 1-2: 4-6 semanas
+  * Fases 3-4: 3-4 semanas
+  * Fase 5: 2-3 semanas
+  * Fase 6: 2 semanas
+  * Fases 7-8: 6-8 semanas
+
+- Práctica diaria recomendada: 2-3 horas
+- Proyectos personales en paralelo: altamente recomendado
+
+===========================================
