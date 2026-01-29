@@ -31,7 +31,3 @@
 
 * **ex_4_turtle**: Write letters by calling functions.
 * **ex_5_turtle**: Draw shapes.
-
-
-
-¿Te gustaría que te ayude a generar el código de Python para alguno de estos archivos siguiendo el formato `ejercicio_n.py` que mencionaste anteriormente?
